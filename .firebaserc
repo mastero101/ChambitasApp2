@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webforum-31430": {
+      "hosting": {
+        "app": [
+          "webforum-31430"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webforum-31430"
+  }
+}

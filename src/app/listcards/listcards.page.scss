@@ -1,0 +1,126 @@
+.titles {
+    padding-left: 40%;
+}
+
+.logo {
+    max-width: 70%;
+    max-height: 70%;
+    padding-left: 20%;
+    @media screen and (max-width:480px){
+        padding-left: 0%;
+    }
+}
+
+p {
+    padding-left: 5%;
+}
+
+ion-slide {
+   max-height: fit-content;
+}
+
+ion-toolbar{
+    background-color: var(--ion-color-mycolor);
+}
+
+ion-title {
+    padding-left: 35%; 
+    color: aliceblue;
+}
+
+img {
+    border-radius: 30%;
+    width: 35%;
+    height: auto;
+    display: flex;
+    align-items: center;
+    max-width:fit-content;
+    box-sizing:content-box;
+    padding-right: 2%;
+
+    @media screen and (max-width:480){
+        border-radius: 50%;
+    }
+}
+
+ion-card-header.ios {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+
+  *{
+    margin: 0;
+    padding: 0;
+}
+.rate {
+    flex-direction: row;
+    flex-flow: row-reverse;
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+    display: flex;
+    justify-content: center;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: #ffc700;    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: #deb217;  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color: #c59b08;
+    rotate: 180deg;
+}
+
+ion-card {
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 10%; 
+    padding-top: 5%;
+}
+
+ion-card-header {
+    flex: 1;
+    align-self: flex-start;
+}
+
+ion-card-content {
+    flex: 1;
+    align-self: center;
+}
+
+ion-card-content.review {
+    flex: 1;
+    align-self: center;
+    justify-items:right;
+}
+
+ion-card-subtitle {
+    flex: 1;
+    align-self: center;
+}
+
+ion-button {
+    padding-left: 35%;
+}

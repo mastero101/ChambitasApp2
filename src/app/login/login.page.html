@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <form [formGroup]="form" novalidate (ngSubmit)="login()">
+    <ion-list>
+      <ion-item class="logobox">
+        <img src="../../assets/icon/2f07e279f38847068657ae8706952940-removebg-preview.png" alt="">
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" class="ion_labbel">Email</ion-label>
+        <ion-input formControlName="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label position="stacked" class="ion_labbel">Password</ion-label>
+        <ion-input type="password" formControlName="password"></ion-input>
+      </ion-item>
+    </ion-list>
+    <ion-row>
+      <ion-col>
+        <ion-button shape="round" type="submit" expand="block">Login</ion-button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        
+      </ion-col>
+    </ion-row>
+  </form>
+
+  <ion-row>
+    <ion-col>
+      <ion-button shape="round" type="button" expand="block" (click)="googleAuth()">Google</ion-button>
+    </ion-col>
+  </ion-row>
+  
+</ion-content>
+
+
+

@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="mycolor">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title
+      ><img
+        class="logo"
+        src="../../assets/icon/2f07e279f38847068657ae8706952940-removebg-preview.png"
+        alt=""
+    /></ion-title>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-title>Registro de Afiliados</ion-title>
+  <br>
+  <ion-item>
+    <ion-item>
+      <img src="https://previews.123rf.com/images/makoou/makoou1402/makoou140200042/27981659-double-buddy-icon.jpg" alt="">
+    </ion-item>
+  </ion-item>
+  <input #imageInput
+         type="file"
+         accept="image/*"
+         (change)="(imageInput)">
+         <br>
+         <br>
+         <br>
+  <ion-input id="0" placeholder="ID" (keyup.enter)="submit()" value="{{(id)+1}}"></ion-input>
+  <br>
+  <ion-input id="1" placeholder="Nombre" (keyup.enter)="submit()"></ion-input>
+  <br>
+  <ion-input id="2" placeholder="Profesion" (keyup.enter)="submit()"></ion-input>
+  <br>
+  <ion-input id="3" placeholder="Cargo" (keyup.enter)="submit()"></ion-input>
+  <br>
+  <ion-button (click)="submit()" >Submit</ion-button>
+</ion-content>

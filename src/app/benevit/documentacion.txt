@@ -1,0 +1,24 @@
+1. Primero, se importan los módulos necesarios: '@angular/core' y '@angular/common/http'.
+
+2. Luego, se define el componente de página BenevitPage. 
+   El decorador @Component proporciona metadatos sobre el componente, 
+   como el selector CSS y la ruta del archivo HTML y SCSS correspondiente.
+
+3. En la clase BenevitPage, se define una propiedad imageUrls como un arreglo de cadenas vacías. 
+   También se define una propiedad hasMoreImages como verdadera.
+
+4. En el constructor, se inyecta una instancia de HttpClient para permitir el uso de solicitudes HTTP.
+
+5. En ngOnInit() se itera el arreglo imageUrls con forEach, invocando la función getImage() 
+   y pasando cada url de la imagen y el indice correspondiente.
+
+6. En getImage() se hace una solicitud GET a una URL específica 'https://api.waifu.pics/sfw/waifu' 
+   con la opciones { responseType: 'text' } . Luego se suscribe al observable del resultado, 
+   el cual es un json y se procesa para obtener la url de la imagen.
+
+7. La función loadMoreImages() es llamada desde algún evento de carga masiva, 
+   comprueba si existen mas imágenes (hasMoreImages) y si es verdadero hace una llamada a getImage(),
+   con el mismo arreglo imageUrls.
+
+8. Si no hay mas imágenes se completa el evento
+
