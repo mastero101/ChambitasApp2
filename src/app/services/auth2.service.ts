@@ -2,12 +2,15 @@ import { Injectable, NgZone } from '@angular/core';
 import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { getAuth, signInWithPopup, FacebookAuthProvider } from 'firebase/auth';
 import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class Auth2Service {
+  provider = new FacebookAuthProvider();
+  auth3 = getAuth();
 
   constructor(
     public afs: AngularFirestore, // Inject Firestore service
@@ -24,6 +27,23 @@ export class Auth2Service {
   }
   // Auth logic to run auth providers
   authLogin(provider: any) {
+    return this.afAuth
+      .signInWithPopup(provider)
+      .then(() => {
+        this.router.navigate(['/home']);
+      })
+      .catch((error) => {
+        window.alert(error);
+      });
+  }
+
+  faceAuth() {
+    return this.authLogin2(new FacebookAuthProvider()).then((res: any) => {
+      this.router.navigate(['/home']);
+    });
+  }
+  // Auth logic to run auth providers
+  authLogin2(provider: any) {
     return this.afAuth
       .signInWithPopup(provider)
       .then(() => {

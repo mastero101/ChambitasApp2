@@ -49,4 +49,8 @@ export class LoginPage implements OnInit {
   googleAuth(){
     this.auth2.googleAuth();
   }
+
+  faceAuth(){
+    this.auth2.faceAuth();
+  }
 }
