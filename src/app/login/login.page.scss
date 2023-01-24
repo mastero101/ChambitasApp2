@@ -63,3 +63,52 @@ ion-title {
     background: #e74b37;
     cursor: pointer;
   }
+
+  /*Facebook Button*/
+
+  .loginBtn2 {
+    box-sizing: border-box;
+    position: relative;
+    width: 19em;  
+    margin: 0.2em;
+    padding: 0 15px 0 46px;
+    border: none;
+    text-align: center;
+    line-height: 36px;
+    white-space: nowrap;
+    border-radius: 0.7em;
+    font-size: 18px;
+    color: #fff;
+  }
+  .loginBtn2:before {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 34px;
+    height: 100%;
+  }
+  .loginBtn2:focus {
+    outline: none;
+  }
+  .loginBtn2:active {
+    box-shadow: inset 0 0 0 32px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Face */
+  .loginBtn2--google {
+    /*font-family: "Roboto", Roboto, arial, sans-serif;*/
+    background: #0015fd;
+  }
+  .loginBtn2--google:before {
+    border-right: #0015fd 1px solid;
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png")
+      6px 6px no-repeat;
+  }
+  .loginBtn2--google:hover,
+  .loginBtn2--google:focus {
+    background: #0015fd;
+    cursor: pointer;
+  }
+
