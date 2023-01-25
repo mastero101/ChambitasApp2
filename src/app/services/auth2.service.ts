@@ -2,7 +2,7 @@ import { Injectable, NgZone } from '@angular/core';
 import * as auth from 'firebase/auth';
 import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { getAuth, signInWithPopup, FacebookAuthProvider } from 'firebase/auth';
+import { getAuth, FacebookAuthProvider, GithubAuthProvider } from 'firebase/auth';
 import { Router } from '@angular/router';
 
 @Injectable({
@@ -44,6 +44,23 @@ export class Auth2Service {
   }
   // Auth logic to run auth providers
   authLogin2(provider: any) {
+    return this.afAuth
+      .signInWithPopup(provider)
+      .then(() => {
+        this.router.navigate(['/home']);
+      })
+      .catch((error) => {
+        window.alert(error);
+      });
+  }
+
+  gitAuth() {
+    return this.authLogin3(new GithubAuthProvider()).then((res: any) => {
+      this.router.navigate(['/home']);
+    });
+  }
+  // Auth logic to run auth providers
+  authLogin3(provider: any) {
     return this.afAuth
       .signInWithPopup(provider)
       .then(() => {

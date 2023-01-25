@@ -53,4 +53,8 @@ export class LoginPage implements OnInit {
   faceAuth(){
     this.auth2.faceAuth();
   }
+
+  gitAuth(){
+    this.auth2.gitAuth();
+  }
 }
