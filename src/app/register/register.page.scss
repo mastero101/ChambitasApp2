@@ -16,3 +16,11 @@ ion-title {
         padding-left: -20%;
     }
 }
+
+img {
+    max-width: fit-content;
+  @media screen and (min-height: 480px) {
+    padding-left: 4em;
+    flex: auto;
+  }
+}

@@ -52,3 +52,13 @@ img {
     flex-wrap: wrap;
     flex-flow: row;
 }
+
+img-logo {
+    img {
+        max-width: fit-content;
+      @media screen and (min-height: 480px) {
+        padding-left: 4em;
+        flex: auto;
+      }
+    }
+}
