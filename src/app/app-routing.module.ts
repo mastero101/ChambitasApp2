@@ -56,6 +56,12 @@ const routes: Routes = [
     data: { authGuardPipe : redirectUnauthorizedToLogin},
     loadChildren: () => import('./worker-register/worker-register.module').then( m => m.WorkerRegisterPageModule)
   },
+  {
+    path: 'profile',
+    canActivate: [ AuthGuard],
+    data: { authGuardPipe : redirectUnauthorizedToLogin},
+    loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
+  },
 ];
 
 @NgModule({

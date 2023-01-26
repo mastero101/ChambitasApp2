@@ -178,7 +178,6 @@ export class ListcardsPage implements OnInit {
       onValue(starCountRef, (snapshot) => {
     this.nombre = snapshot.val();
     });
-
   }
 
   getProfesiones() {
@@ -186,7 +185,7 @@ export class ListcardsPage implements OnInit {
     const work = ref(db, '/id/profesiones/' + '/profesion');
       onValue(work, (snapshot) => {
     this.profesion = snapshot.val();
-  });
+    });
   }
 
   getValue() {
