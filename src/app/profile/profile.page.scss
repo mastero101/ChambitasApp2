@@ -43,6 +43,11 @@ img {
     }
 }
 
+img.logo {
+    padding-left: 12em;
+    border-radius: 20%;
+}
+
 ion-card-header.ios {
     display: flex;
     flex-flow: column-reverse;
@@ -51,4 +56,20 @@ ion-card-header.ios {
   *{
     margin: 0;
     padding: 0;
+}
+
+ion-content.logo {
+    flex:auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 50%;
+    .ion-card-title {
+        padding-left: 10em;
+        background-color: black;
+    }
+}
+
+ion-item.header {
+    padding-top: 1em;
+    padding-left: 11em;
 }
