@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { AuthService } from '../services/auth.service';
 
 import { getDatabase, ref, update, child, get, onValue } from 'firebase/database';
 
@@ -23,7 +24,7 @@ export class ProfilePage implements OnInit {
   constructor() {
     this.nombre = this.getNombre();
     this.profesion = this.getProfesiones();
-    this.review = 'Name';
+    this.review = 'Esta es una prueba de concepto para la pagina Perfil';
    }
 
   ngOnInit() {
