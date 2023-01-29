@@ -118,6 +118,10 @@ export class ListcardsPage implements OnInit {
     console.log('Local storage cleared');
   }
 
+  reload() {
+    window.location.reload();
+  }
+
   reviewRate() {
     const review = (document.getElementById('1') as HTMLInputElement).value;
       localStorage.setItem('review', review);

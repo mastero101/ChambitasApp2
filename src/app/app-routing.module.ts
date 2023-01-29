@@ -52,8 +52,6 @@ const routes: Routes = [
   },
   {
     path: 'worker-register',
-    canActivate: [ AuthGuard],
-    data: { authGuardPipe : redirectUnauthorizedToLogin},
     loadChildren: () => import('./worker-register/worker-register.module').then( m => m.WorkerRegisterPageModule)
   },
   {

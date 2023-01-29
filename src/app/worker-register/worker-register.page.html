@@ -36,5 +36,10 @@
   <br>
   <ion-input id="3" placeholder="Cargo" (keyup.enter)="submit()"></ion-input>
   <br>
-  <ion-button (click)="submit()" >Submit</ion-button>
+  <ion-button shape="round" (click)="submit()">Submit</ion-button>
+  <ion-card>
+    <ion-button style="margin-bottom: 3em; margin-left: 0em;" shape="round" (click)="reload()">
+      Reload
+    </ion-button>
+  </ion-card>
 </ion-content>

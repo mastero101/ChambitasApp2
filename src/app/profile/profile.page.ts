@@ -46,4 +46,8 @@ export class ProfilePage implements OnInit {
     });
   }
 
+  reload() {
+    window.location.reload();
+  }
+
 }

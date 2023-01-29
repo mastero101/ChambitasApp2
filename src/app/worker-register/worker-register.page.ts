@@ -47,4 +47,8 @@ export class WorkerRegisterPage implements OnInit {
       });
     console.log(nombre,profesion,cargo);
   }
+
+  reload() {
+    window.location.reload();
+  }
 }
