@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthService } from '../services/auth.service';
+import { ResourcesService } from '../services/resources.service';
 
 import { getDatabase, ref, update, child, get, onValue } from 'firebase/database';
 
@@ -18,16 +19,18 @@ export class ProfilePage implements OnInit {
              profesion: 'Service',
              };
   nombre: any;
+  nombre2: any;
   profesion: any;
   review: any;
 
-  constructor() {
+  constructor(private resources: ResourcesService) {
     this.nombre = this.getNombre();
     this.profesion = this.getProfesiones();
     this.review = 'Esta es una prueba de concepto para la pagina Perfil';
    }
 
   ngOnInit() {
+    this.nombre2 = this.resource();
   }
 
   getNombre() {
@@ -50,4 +53,7 @@ export class ProfilePage implements OnInit {
     window.location.reload();
   }
 
+  resource() {
+    this.nombre2 = this.resources.getNombre();
+  }
 }
