@@ -60,6 +60,12 @@ const routes: Routes = [
     data: { authGuardPipe : redirectUnauthorizedToLogin},
     loadChildren: () => import('./profile/profile.module').then( m => m.ProfilePageModule)
   },
+  {
+    path: 'mtg',
+    canActivate: [ AuthGuard],
+    data: { authGuardPipe : redirectUnauthorizedToLogin},
+    loadChildren: () => import('./mtg/mtg.module').then( m => m.MtgPageModule)
+  },
 ];
 
 @NgModule({
