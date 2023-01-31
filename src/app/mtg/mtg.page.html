@@ -15,15 +15,27 @@
 
 <ion-content>
   <br>
-  <br>
-  <ion-card style="border-radius: 20px;">
+  <ion-card>
     <ion-card-content>
-      <ion-label style="margin-left: 10em;"></ion-label>
-      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; max-width: 200px; max-height: 200px;" src="https://ps.w.org/easy-under-construction/assets/icon-256x256.png?rev=2417171" alt="">
+      <ion-input id="input" style="text-align: center; margin-bottom: 1em;" placeholder="Nombre Carta">
+        
+      </ion-input>
+      <ion-button style="margin-left: 11em; margin-bottom: 1em;">
+        Buscar
+      </ion-button>
     </ion-card-content>
   </ion-card>
   <br>
-  <ion-card style="border-radius: 20px;">
+  <br>
+  <ion-card>
+    <ion-card-content>
+      <ion-label style="margin-left: 10em;"></ion-label>
+      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; max-width: 200px; max-height: 200px;"
+           src="https://ps.w.org/easy-under-construction/assets/icon-256x256.png?rev=2417171">
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card>
     <ion-card-content style="margin-left: 9em; margin-top: 1em;">
       {{build.message | uppercase}}
     </ion-card-content>
@@ -31,7 +43,9 @@
       {{build.what | uppercase}}
     </ion-card-content>
     <ion-card-content>
-      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; padding-top: 2em;" src="../../assets/eevee.png" alt="">
+      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; padding-top: 2em;" 
+           src="../../assets/eevee.png">
     </ion-card-content>
   </ion-card>
+
 </ion-content>
