@@ -14,9 +14,24 @@
 </ion-header>
 
 <ion-content>
-  <ion-card>
+  <br>
+  <br>
+  <ion-card style="border-radius: 20px;">
     <ion-card-content>
-      
+      <ion-label style="margin-left: 10em;"></ion-label>
+      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; max-width: 200px; max-height: 200px;" src="https://ps.w.org/easy-under-construction/assets/icon-256x256.png?rev=2417171" alt="">
+    </ion-card-content>
+  </ion-card>
+  <br>
+  <ion-card style="border-radius: 20px;">
+    <ion-card-content style="margin-left: 9em; margin-top: 1em;">
+      {{build.message | uppercase}}
+    </ion-card-content>
+    <ion-card-content style="margin-left: 11em; margin-top: 1em;">
+      {{build.what | uppercase}}
+    </ion-card-content>
+    <ion-card-content>
+      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; padding-top: 2em;" src="../../assets/eevee.png" alt="">
     </ion-card-content>
   </ion-card>
 </ion-content>

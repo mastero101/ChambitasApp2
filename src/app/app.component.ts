@@ -19,7 +19,7 @@ export class AppComponent {
     { title: 'Perfil', url: '/profile', icon: 'person' },
     { title: 'Benevit', url: '/benevit', icon: 'archive' },
     { title: 'Trabajos', url: '/listcards', icon: 'man' },
-    { title: 'MTG Cards', url: '/mtg', icon: 'card' },
+    { title: 'Pokemon Cards', url: '/mtg', icon: 'card' },
     { title: 'Mapa', url: '/maps', icon: 'map' },
     { title: 'Registro Afiliado', url: '/worker-register', icon: 'laptop' },
     { title: 'Register', url: '/register', icon: 'book' },

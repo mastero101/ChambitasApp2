@@ -33,6 +33,8 @@
     "firebase": "^9.15.0",
     "igniteui-webcomponents": "^4.1.1",
     "ionicons": "^6.0.3",
+    "mtgsdk": "^1.0.0",
+    "pokemontcgsdk": "^2.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
