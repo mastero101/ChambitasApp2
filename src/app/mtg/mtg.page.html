@@ -28,15 +28,26 @@
   <br>
   <br>
   <ion-card>
-    <ion-card-content>
-      <ion-label style="margin-left: 10em; padding-left: 3em;">{{name | uppercase}}</ion-label>
-      <ion-label style="margin-left: 10em; padding-left: 3em;">{{stage}}</ion-label>
-      <ion-label style="margin-left: 10em; padding-left: 3em;">{{types}}</ion-label>
-      <ion-label style="margin-left: 10em; padding-left: 3em;">Hp: {{hp}}</ion-label>
-      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; max-width: 400px; max-height: 200px;"
+    <ion-card class="info">
+      <ion-label style="margin-left: 2.3em; ">{{name | uppercase}}</ion-label>
+    </ion-card>
+    <ion-card class="info">
+      <ion-label style="margin-left: 2.3em; ">{{stage}}</ion-label>
+    </ion-card>
+    <ion-card class="info">
+      <ion-label style="margin-left: 2.3em; ">{{types}}</ion-label>
+    </ion-card>
+    <ion-card class="info">
+      <ion-label style="margin-left: 2.3em; ">{{(hp)}}</ion-label>
+    </ion-card>
+      <img class="pokecard" style="max-width: 27em; margin-left: 0.5em; margin-bottom: 0.8em;"
            src={{imgeUrls}}>
-      <ion-label style="margin-left: 10em; padding-left: 3em;">$ {{priceTCGPlayer}}</ion-label>
-    </ion-card-content>
+    <ion-card class="info" >
+      <ion-label style="margin-left: 3.5em;">{{priceTCGPlayer}}</ion-label>
+    </ion-card>
+    <ion-card class="info" >
+      <ion-label style="margin-left: 3.5em;">{{priceCardMarket}}</ion-label>
+    </ion-card>
   </ion-card>
   <br>
   <ion-card>
@@ -47,7 +58,12 @@
       {{build.what | uppercase}}
     </ion-card-content>
     <ion-card-content>
-      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; padding-top: 2em;" 
+      <img style="margin-left: 10em;  
+                  margin-bottom: 2em; 
+                  border-radius: 10%; 
+                  padding-top: 2em; 
+                  border-radius: 30%;
+                  width: 35%;" 
            src="../../assets/eevee.png">
     </ion-card-content>
   </ion-card>

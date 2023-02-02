@@ -24,6 +24,7 @@ export class MtgPage implements OnInit {
   types: any;
   hp: any;
   priceTCGPlayer: any;
+  priceCardMarket: any;
 
   constructor(private http: HttpClient) {
     /*PokemonTCG.({ apiKey: '402a62a4-e172-4e5e-bf0c-f8d0ebc83541' });*/
@@ -38,15 +39,16 @@ export class MtgPage implements OnInit {
   }
 
   getAxiosData(){
-    axios.get('https://api.pokemontcg.io/v2/cards/xy7-52')
+    axios.get('https://api.pokemontcg.io/v2/cards/xy7-55')
     .then(response => this.element = response.data);
     console.log(this.element.data.images.large);
     this.imgeUrls = this.element.data.images.large;
     this.name = this.element.data.name;
     this.stage = this.element.data.subtypes;
     this.types = this.element.data.types;
-    this.hp = this.element.data.hp;
-    this.priceTCGPlayer = this.element.data.tcgplayer.prices.normal.market;
+    this.hp = ('Hp: ' + this.element.data.hp);
+    this.priceTCGPlayer = ('Price - $ ' + this.element.data.tcgplayer.prices.normal.market);
+    this.priceCardMarket = ('Price - $ ' + this.element.data.cardmarket.prices.trendPrice);
   }
 
   getAxiosData2(){
