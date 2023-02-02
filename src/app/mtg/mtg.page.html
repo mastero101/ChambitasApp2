@@ -17,10 +17,10 @@
   <br>
   <ion-card>
     <ion-card-content>
-      <ion-input id="input" style="text-align: center; margin-bottom: 1em;" placeholder="Nombre Carta">
+      <ion-input style="text-align: center; margin-bottom: 1em;" placeholder="Nombre Carta">
         
       </ion-input>
-      <ion-button style="margin-left: 11em; margin-bottom: 1em;">
+      <ion-button style="margin-left: 11em; margin-bottom: 1em;" (click)="getAxiosData()">
         Buscar
       </ion-button>
     </ion-card-content>
@@ -29,14 +29,18 @@
   <br>
   <ion-card>
     <ion-card-content>
-      <ion-label style="margin-left: 10em;"></ion-label>
-      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; max-width: 200px; max-height: 200px;"
-           src="https://ps.w.org/easy-under-construction/assets/icon-256x256.png?rev=2417171">
+      <ion-label style="margin-left: 10em; padding-left: 3em;">{{name | uppercase}}</ion-label>
+      <ion-label style="margin-left: 10em; padding-left: 3em;">{{stage}}</ion-label>
+      <ion-label style="margin-left: 10em; padding-left: 3em;">{{types}}</ion-label>
+      <ion-label style="margin-left: 10em; padding-left: 3em;">Hp: {{hp}}</ion-label>
+      <img style="margin-left: 10em;  margin-bottom: 2em; border-radius: 10%; max-width: 400px; max-height: 200px;"
+           src={{imgeUrls}}>
+      <ion-label style="margin-left: 10em; padding-left: 3em;">$ {{priceTCGPlayer}}</ion-label>
     </ion-card-content>
   </ion-card>
   <br>
   <ion-card>
-    <ion-card-content style="margin-left: 9em; margin-top: 1em;">
+    <ion-card-content class="name" style="margin-left: 9em; margin-top: 1em;">
       {{build.message | uppercase}}
     </ion-card-content>
     <ion-card-content style="margin-left: 11em; margin-top: 1em;">
