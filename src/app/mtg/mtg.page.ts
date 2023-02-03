@@ -11,13 +11,13 @@ import axios from 'axios';
   styleUrls: ['./mtg.page.scss'],
 })
 export class MtgPage implements OnInit {
-  imageUrls = [''];
   build = {
     message: 'Under Construction',
     what: 'Pokemon TGC',
   };
   card: any;
   imgeUrls = [];
+  list: any;
   element: any;
   name: any;
   stage: any;
@@ -39,16 +39,17 @@ export class MtgPage implements OnInit {
   }
 
   getAxiosData(){
-    axios.get('https://api.pokemontcg.io/v2/cards/xy7-55')
+    const search = (document.getElementById('1') as HTMLInputElement).value;
+    axios.get('https://api.pokemontcg.io/v2/cards/xy7-'+ search)
+    /*axios.get('https://api.pokemontcg.io/v2/cards?q=name:(this.card = this.input())')*/
     .then(response => this.element = response.data);
-    console.log(this.element.data.images.large);
     this.imgeUrls = this.element.data.images.large;
     this.name = this.element.data.name;
     this.stage = this.element.data.subtypes;
     this.types = this.element.data.types;
     this.hp = ('Hp: ' + this.element.data.hp);
-    this.priceTCGPlayer = ('Price - $ ' + this.element.data.tcgplayer.prices.normal.market);
     this.priceCardMarket = ('Price - $ ' + this.element.data.cardmarket.prices.trendPrice);
+    this.priceTCGPlayer = ('Price - $ ' + this.element.data.tcgplayer.prices.normal.market);
   }
 
   getAxiosData2(){
